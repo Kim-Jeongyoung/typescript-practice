@@ -13,6 +13,8 @@ var flowers = { name: 'rose' };
 var flower1 = {}; // name 속성은 옵션 즉 안 들어 올 수도 있다.
 // 4. Union type : 다양한 타입이 들어올 수 있게 하려면
 var 행복 = 123; // string이 가득한 어레이 또는 숫자
+var 우리들 = [1, '2', '3'];
+var 오브젝트 = { a: 123 };
 var 즐거움 = 123;
 // 6.함수에 타입 지정 parameter: number return value: number가 들어옴
 function 함께(x) {
@@ -28,3 +30,37 @@ var User = /** @class */ (function () {
     }
     return User;
 }());
+// 10. any 타입 => 타입 지정을 해제 하는 문법이라 생각/ 일반 JS 변수로
+var 나무;
+나무 = 123;
+나무 = [];
+// 11.unknown 타입 => 모든 자료형 허용해줌?
+var 꽃;
+꽃 = 123;
+꽃 = [];
+꽃 = {};
+꽃 - 1; //에러 - 간단한 수학연산도 타입이 맞아야 함
+// 12. Literal Type : 특정 글자나 숫자만 가질 수 있게 제한을 두는 타입
+var JY;
+var Kelly;
+var jeongyoung;
+jeongyoung = 'mom';
+jeongyoung = 'dad'; // 에러
+//// 함수의 경우
+// question 아래 자료의 타입 지정을 해 보세요.
+var project = {
+    friend: ['Kelly', 'JY'],
+    days: 20,
+    started: true
+};
+//답
+// let project :{
+//     friends : string[],
+//     days : number,
+//     started : boolean,
+// } = {
+//   friends: ['Kelly', 'JY'],
+//   days: 20,
+//   started: true,
+// };
+//question

@@ -18,6 +18,8 @@ let flower1: { name?: string } = {}; // name 속성은 옵션 즉 안 들어 올
 
 // 4. Union type : 다양한 타입이 들어올 수 있게 하려면
 let 행복: string[] | number = 123; // string이 가득한 어레이 또는 숫자
+let 우리들: (number | string)[] = [1, '2', '3'];
+let 오브젝트: { a: string | number } = { a: 123 };
 
 // 5.Type alias : 타입 지정하는 문법이 길 경우=> 타입은 변수에 담아 쓸 수 있음
 // 타입명 => 대문자로 쓰기 Joy
@@ -55,3 +57,45 @@ class User {
     this.dream = dream;
   }
 }
+
+// 10. any 타입 => 타입 지정을 해제 하는 문법이라 생각/ 일반 JS 변수로
+let 나무: any;
+나무 = 123;
+나무 = [];
+
+// 11.unknown 타입 => 모든 자료형 허용해줌?
+let 꽃: unknown;
+꽃 = 123;
+꽃 = [];
+꽃 = {};
+
+꽃 - 1; //에러 - 간단한 수학연산도 타입이 맞아야 함
+
+// 12. Literal Type : 특정 글자나 숫자만 가질 수 있게 제한을 두는 타입
+let JY: 'Front-end engineer';
+let Kelly: 'My mentor';
+let jeongyoung: 'Front-end engineer' | 'mom';
+jeongyoung = 'mom';
+jeongyoung = 'dad'; // 에러
+
+//// 함수의 경우
+
+// question 아래 자료의 타입 지정을 해 보세요.
+let project = {
+  friend: ['Kelly', 'JY'],
+  days: 20,
+  started: true,
+};
+
+//답
+// let project :{
+//     friends : string[],
+//     days : number,
+//     started : boolean,
+// } = {
+//   friends: ['Kelly', 'JY'],
+//   days: 20,
+//   started: true,
+// };
+
+//question
