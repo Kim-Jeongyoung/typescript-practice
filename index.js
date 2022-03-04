@@ -65,6 +65,15 @@ function myLove(a) { }
 // myLove('leah');
 자료.love = 123;
 myLove(자료.love); // 에러 / 리아라는 타입만 들어 올 수 있기 때문에
+// 13. never type : never type is used to indicate the value that will never occur or return from a function.
+function throwError(errorMsg) {
+    throw new Error(errorMsg);
+}
+function keepProcessing() {
+    while (true) {
+        console.log('I always does something and never ends.');
+    }
+}
 // object 안에 함수 만들고 Method 안에 함수 지정하기
 var 회원정보 = {
     name: 'kelly',
