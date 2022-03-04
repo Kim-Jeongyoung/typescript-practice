@@ -47,6 +47,17 @@ var jeongyoung;
 jeongyoung = 'mom';
 jeongyoung = 'dad'; // 에러
 //// 함수의 경우
+function fly(a) {
+    return 'sky';
+}
+//// Literal type 문제점
+var 자료 = {
+    love: 'Leah'
+};
+function myLove(a) { }
+// myLove('leah');
+자료.love = 123;
+myLove(자료.love); // 에러 / 리아라는 타입만 들어 올 수 있기 때문에
 // question 아래 자료의 타입 지정을 해 보세요.
 var project = {
     friend: ['Kelly', 'JY'],
